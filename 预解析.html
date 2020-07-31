@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预解析</title>
+</head>
+<body>
+<script>
+    var a = 1;//1在外面获取不到他全局变量
+    function f() {//关键字 函数名//2
+        console.log(a);//3打印 undefind 未定义变量提升
+        var a = 2;//4在es5中唯一划分作用域的函数 在函数中不可以访问外面的变量只能自身的变量
+    }
+    f();//5 。调用函数名 window ---html
+    var b;//1
+    function f1() {//2
+        var b;//先声明3
+        console.log(b);//undefind4
+        b = 2;//后负值5
+    }
+    b = 1;//undefind6
+    f1();//7
+</script>
+</body>
+</html>

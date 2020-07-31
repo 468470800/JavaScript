@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击事件</title>
+    <style>
+        p{
+            background: #8a060b;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<button type="button" onclick="myFunction()">点击我！</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+                alert('How are You?')
+
+        document.getElementById('demo1').innerHTML="HELLO Kitty";
+        document.getElementById('demo2').innerHTML="HOLL WORLD"
+    }
+    document.getElementById("demo").innerHTML="速度与激情 ";
+
+</script>
+</body>
+</html>

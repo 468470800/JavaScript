@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="javascript:;" onclick="f()">惦记我试试</a>
+<a href="#" onclick="f1()">onlick</a>
+<!--onclick ="绑定点击事件"触发  href="javascript:;"为空不能跳转-->
+<script>
+
+    function f() {
+        alert("点击触发事件");
+    }
+    function f1() {
+        alert("哈哈哈")
+    }
+    //调用函数
+    function f2() {
+        console.log(3+2)
+    }
+    fn2();
+    //点击事件.html?_ijt=42pf2o5fsld8d7fpj3hm5hrui8:23 Uncaught ReferenceError: fn2 is not defined
+    //匿名函数
+    // var 函数名 = function () {
+    //     函数体
+    // }
+    // 函数名()
+
+
+</script>
+</body>
+</html>

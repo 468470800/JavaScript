@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递增递减</title>
+</head>
+<body>
+<script>
+    // 1
+    // var a = prompt ('输入');//输入一个书
+    // a = Number(a);//将它转化成数字类型
+    // var b = prompt('输入');//
+    // b = Number(b);//
+    //(a>b)?alert(a):alert(b);//三目运算符 判断比较如果a > b 弹出 a 否则弹出B
+  //  (a>b)?alert(a):alert(b)?(a=b):alert('一样大')
+    // (a>b)?alert(a):(a<b)?alert(b):alert('一样大')
+    // 2
+     var v = 13;
+     var n = v++;
+     console.log(v);//14
+     console.log(n);//13  先赋值后加加
+    var q = 10;
+    var r = q --;//先赋值后减
+    console.log(q);//9
+    console.log(r)//10
+    var y = 13;
+    var t = ++y;
+    console.log(t,'++ 号在前先+后赋值 +号在后后加在赋值 --xx在前先--');//++ 号在前先+后赋值 +号在后后加在赋值
+    console.log(t,'--在后赋值--在后后--');
+    console.log('script解释性编程语言每一行一个字都是有顺序执行');
+    var name = prompt('李星云女帝 蚩梦 雪');
+    // (name == '条件'):?('xxx'):('XXX')
+    //     (name == '女帝')?alert('入赘凤祥'):(name == '蚩梦')?alert('收揽十二洞'):(name == '雪')?alert('神仙眷侣,平定天下')
+      (name == '女帝')?alert('入赘凤祥，一统江山'):(name == '蚩梦')?alert('收揽十二峒'):alert('神仙眷侣，游戏江湖');
+</script>
+</body>
+</html>

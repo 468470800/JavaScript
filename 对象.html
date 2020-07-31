@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+    <style>
+        p{
+            background: #acb0b1;
+        }
+    </style>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="dem"></p>
+<script>
+    var car = "porsche";
+    document.getElementById("demo").innerHTML= car;
+
+    var car1 = {type:"porsche",model:"911",color:"white"};//创建对象
+    document.getElementById("demo1").innerHTML = car.type;//显示对象的数据
+    //创建对象
+    var person = {
+        firstName:"Bill",
+        lastName :"Gates",
+        id : 123456
+    }
+    //显示对象中的数据
+    document.getElementById("dem").innerHTML=person.firstName+" "+person.lastName;
+
+</script>
+</body>
+</html>

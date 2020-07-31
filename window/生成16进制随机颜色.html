@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成16进制随机颜色</title>
+
+</head>
+<body>
+<!--//生成一个背景颜色为16进制-->
+<!--    16进制-->
+<script>
+    var arr = ['0','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f'];//第一步生成16进制的
+    //十六进制
+    var str ='#';//第二部开头首字母# 声明一个新的变量在赋值到里面去
+    for(var i = 0; i < 6; i++){//循环6次
+            var rand = Math.floor(Math.random()*arr.length);//随机数向下取整随机
+            var str = str + arr[rand];//把随机数出来的 的长度添加到新的字符串里面去
+    }
+    console.log(str)
+
+  function f() {
+        var arr = ['0','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f'];//第一步生成16进制的
+        var str ='#'
+        for (var i = 0; i < 2; i++){
+            var redn = Math.floor(Math.random()*arr.length);
+            var str = str + redn +arr[redn];
+        }
+        return str;
+  }
+    console.log(f())
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setlnterval</title>
+</head>
+<body>
+<button onclick="start()">开始</button>
+<button onclick="stop()">结束</button>
+
+<script>
+    //间歇性定时器
+    function start() {
+         timer = setInterval(function () {
+        document.write('十步杀一人千里不留情  李白')
+    },4000)
+    }
+    // function stop() {
+    //     clearInterval(setInterval(function () {
+    //     document.write('十步杀一人千里不留情  李白')
+    // },4000))
+    // }
+     function stop() {
+        clearInterval(timer)
+    }
+
+</script>
+</body>
+</html>

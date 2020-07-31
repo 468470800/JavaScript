@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sort</title>
+</head>
+<body>
+<script>
+    //sort
+    var ass = [1,2,3,4,5,6,7];
+    console.log(ass.sort());
+    console.log(ass.sort(paixu));//ass数组名.sort方法名字(函数名);
+    console.log(ass.sort(f));//ass数组名.sort方法名字(函数名);
+    function paixu(a,b){//在这里直接调用函数名字即可
+        return a - b;//a - b 是一个默认从小都大的排序方式
+    }
+    function f(b,a) {
+        return b - a;//默认排序从大到小
+    }
+    //去重
+    var aee = [1,2,3,4,5,6,7,8,9,9,1];//1
+    var newAee = [];//2新数组
+    for(var a = 0; a < aee.length; a++){//循环数组
+        // newAee.push(aee[a]);//
+        if(newAee.indexOf(aee[a])== -1){//判断如果indexOf(aee[的数组]);里面有他就== -1
+             newAee.push(aee[a])//找不到的就会执行添加到这个里面
+        }
+    }
+    console.log(newAee);
+    var auu = [1,1,2,3,4,4,2,3,5,6,6];
+    var newAuu = [];
+    for(var i = 0; i < auu.length; i++){
+        // console.log(auu)
+        if(newAuu.indexOf(auu[i])== -1){
+            newAuu.push(auu[i])
+        }
+    }
+    console.log(newAuu)
+    var aqq = [188,199,199,188,2000];
+    var ann = [];
+    for(var s = 0; s < aqq.length; s++){
+        if(ann.indexOf(aqq[s])== -1){
+            ann.push(aqq[s])
+        }
+    }
+    console.log(ann)
+    //去空
+    var aff = [0,,1,2,,3,,4,,];
+    console.log(aff);
+    for(var i = 0; i < aff.length; i++){
+        if(aff[i] == undefined){
+        aff.splice(i,1);
+        i--;
+    }
+    }
+    console.log(aff);
+    aff.splice(i,1)
+    //去空
+    var amm = [11,,22,,33,,44,,55,,,,,,];
+    console.log(amm);
+    for(var r = 0; r < amm.length; r++){
+        if(amm[r] == undefined ){
+            amm.splice(r,1)
+        }
+    }
+
+</script>
+</body>
+</html>

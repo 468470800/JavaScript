@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期对象获取方式</title>
+</head>
+<body>
+<script>
+    //创建时间
+    var myDate = new Date();
+    console.log(myDate);
+    //转字符串两种方法 toString
+    var mqDate = myDate.toString();//toString()默认二进制可以转化成16进制
+    console.log(mqDate,'国际标准时间');
+    //toLocaleString();
+    var maDate = myDate.toLocaleString()
+    console.log(maDate,'中国标准时间');
+    //获取未来时间转字符串两种方式
+    var mt_Date = new Date('2022 01-01 00:00:00');
+    var ml_Date = mt_Date.toLocaleString();
+    console.log(ms_Date,typeof(ml_Date));
+    var ms_Date = mt_Date.toString();
+    console.log(ms_Date,typeof(ms_Date));
+    //valueOf 返回值   1970 01 01 至今天的毫秒数
+    var vlDate = mt_Date.valueOf();
+    console.log(vlDate,typeof(vlDate),'valueOf 返回值   1970 01 01 至今天的毫秒数');//Number
+    //  getTime() 返回值是 1970-01-01到现在的毫秒数
+    var meDate = new Date('2020 07 05');
+    var meDate = meDate.getTime();//将毫秒转化时间戳
+    console.log(meDate,typeof(meDate),'getTime() 返回值是 1970-01-01到现在的毫秒数');//Number
+    //时间戳   毫秒转化为时间戳
+    var mrDate = new Date();
+    var mrrDate = mrDate.setTime(1593878400000)
+    console.log(mrDate,mrrDate,typeof(mrrDate));
+    //1.    获取当前时间 转化成字符串成的两种方式 获取未来时间
+    var msDate = new Date('2022 01-01 00:00:00');//获取未来时间
+    var ssDate = msDate.toString();
+    var smDate = msDate.toLocaleString();
+    console.log(msDate,typeof(msDate));
+    console.log(ssDate,typeof(ssDate));
+    console.log(smDate,typeof(smDate));
+    //2.
+    var nnDate = new Date('2020 07 05 00:00:00');//未来时间
+    console.log(nnDate,typeof(nnDate));
+    var ddDate = new Date('2017 06 01 00:00:00')
+    console.log(ddDate, typeof(ddDate));
+    var dsDate = ddDate.getTime();//1496246400000
+    console.log(dsDate,typeof(dsDate));//把当前时间转化成时间戳距离19700101
+    var nrDate = ddDate.setTime(1496246400000)
+    console.log(nrDate,typeof(nrDate))
+    var wwDate = new Date();
+    // var wwDate = wwDate.toString();
+    // console.log(wwDate)
+    var weDate = wwDate.getTime();
+    console.log(weDate,typeof(weDate));
+    //valueOf
+    var mvDate = new Date();
+    var mvDate = mvDate.valueOf();//返回值1970 0101到现在毫秒数
+    console.log(mvDate,typeof(mvDate),'返回值1970 0101到现在毫秒数');//1593960122893
+    //getTime();将日期转化为时间戳
+    var qqDate = new Date();
+    var qqDate = qqDate.getTime();
+    console.log(qqDate,'1970年01月01日至今天的毫秒数,将日期转化为时间戳');
+    //setTime()将时间戳转化为日期
+    var ttDate = new Date();
+    ttDate.setTime(1593960557736);
+    console.log(ttDate,'将时间戳转化为日期')
+
+
+</script>
+</body>
+</html>

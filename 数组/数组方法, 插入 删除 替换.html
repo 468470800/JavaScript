@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入删除替换</title>
+</head>
+<body>
+<script>
+    //splice 截取数组长度从下标开始截取
+    var arr = [1,2,3,4,5,6];
+    console.log(arr);//原来数组
+    var res = arr.splice(0,2);
+    console.log(res);//splice 变化后的数组
+    console.log(arr);//原来数组截取完成后的
+    //倒叙 reverse
+    var app = [1,2,3,3,4,5,6];
+    console.log(app);//原来的
+    var ppa = app.reverse();
+    console.log(ppa);//倒叙后的
+    //字符串拼接 concat
+    var cal1 = [1,2,3,4];
+    var cal2 = [5,6,7,8];
+    var cal3 = cal1.concat(cal2);
+    console.log(cal3)
+    //slice 截取字符串长度下标开始 截取几个
+    var agg = [0,1,2,3,4];
+    var ajj = agg.slice(2);
+    console.log(ajj);
+    //unshift() 参数有两个 添加 数组的头部 返回数组长度
+    var aww = [1,2,3,4];
+    var aa = aww.unshift(0);
+    console.log(aa);//5length
+    var srr = [true,false,"number"];
+    console.log(srr);
+    var stt = srr.unshift('2',0);
+    console.log(stt);
+    //push
+    var scc = [3,4,5,6];
+    var sff = scc.push('2',true);
+    console.log(sff);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoM节点操作</title>
+</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2<p id="p1">1</p></div>
+<div id="div3">div3<p id="p3">1</p></div>
+<div id="div4">div4<p id="p4">4</p></div>
+<div id="div5">div5 <p id="p5">5</p></div>
+<script>
+    //创建节点createElement     appendChild添加插入节点
+    var oDiv1 = document.getElementById('div1');//获取节点
+    var oP = document.createElement('p');//创建节点
+    oP.setAttribute("setyle","background:color;")
+    oDiv1.appendChild(oP);//添加到哪里
+
+    //插入节点
+    //2.	insertBefore(新节点,在哪个节点前插入);2.	insertBefore(新节点,在哪个节点前插入);
+    var oDiv2 = document.getElementById('div2');
+    var oP1 = document.getElementById('p1');
+    var oP2 = document.createElement('p');//创建节点
+    oDiv2.insertBefore(oP2,oP1);//插入的节点 参数2 插入节点名字前
+
+    //removeChild()删除节点
+     var oDiv3 = document.getElementById('div3');
+     var oP3 = document.getElementById('p3');
+     oDiv3.removeChild(oP3);//删除
+    //1.replaceChild(要更新的节点,要替换的节点);
+    var oP4 = document.getElementById('p4');
+    var oSpan = document.createElement('span');
+    oSpan.innerHTTML = "2";
+    oP4.parentElement.replaceChild(oSpan,oP4);
+    //克隆节点  cloneNode()
+      var oP5 = document.getElementById('p5').cloneNode(true);
+      var oDiv5 = document.getElementById('div5');
+      oDiv5.appendChild(oP5)
+</script>
+</body>
+</html>

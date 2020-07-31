@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window</title>
+</head>
+<body>
+<script>
+    var a = 1;
+    console.log(a);//window
+    function f() {
+        alert('you hol de')
+    }
+    console.log(window);
+    // javascript中任何一个对象都给了window
+    alert(window);
+    window.alert('window');
+    var res = window.confirm('刻苦努力');
+    // alert(res);
+    if(res){
+        alert('刻苦努力月薪过万')
+    }else{
+        alert('回家种地');
+    }
+</script>
+</body>
+</html>

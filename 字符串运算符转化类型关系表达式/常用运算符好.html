@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 123;//数字类型Number
+    var b = typeof a;//判断好a 的数据类型再把它赋值给b
+    console.log(b);//Number
+    console.log(typeof b);//这次是判断B的数据类型 string
+// + - / * %
+    var f = 22;
+    var t = 45;
+    var u = f + t;
+    console.log(u);
+    var h = f * t;
+    console.log(h);
+    var q = f / t;
+    console.log(q);
+    // %    取余数 余数
+    var g = f % t;
+    console.log(g);
+    var o = 20;
+    var p = 2;
+    var k = o % p;//20/2可以除尽没有余数所以0
+    console.log(k);
+    var x = 20;
+    var z = -3;
+    var j = x % z;
+    console.log(j);//3x6=18 % 2
+    console.log(typeof j);
+// < >
+    var uu = 66;
+    var rr = 88;
+    console.log(uu<rr);//true正确 88 大于> 66
+    console.log(uu>rr);//错误 false 88< 66
+    //>=大于或等于为真 <= 小于等于为真
+    console.log(uu<=rr);//true
+    console.log(uu>=rr);//false
+    console.log(uu == rr);//判断 66是否等于88 false
+    console.log(uu != rr)//判断 66 不等于 88 true
+    var aa = 99;
+    var dd = 99;
+    // == === !=
+    //只比较数值相等 一真为真 否则为假的
+    console.log(aa == dd);//true
+    console.log(aa != dd);//false
+    console.log(aa === dd);//true
+    // 判断数据类型 和 值 是否都相等 有一个不相等都不相等
+    //比如 aa === dd 都是数据类型Number 数值 都是 99 =true
+    var ww = 95;
+    var tt = 100    ;
+    console.log(ww === tt);
+    console.log('<br/>')
+    var ff = 100;
+    var gg = 100;
+    console.log(ff == gg);//true
+    console.log( ff != gg );//false
+    var ad = 55;
+    var AD = 77;
+    console.log(ad === AD);//false
+    console.log(AD != ad);//true
+    //逻辑运算符 ! && ||
+    //&& 如果两个数有一个是真的一个是假的一个是假的都是假
+    var aq = 3 > 2;
+    var cb = 38 < 1069;
+    var m = aq && cb;
+    console.log(m,'两者都为真时都为真一个为假 假');
+    var ss = 1 > 10;//1大于10？？？？
+    var qq = 6 > 5;
+    console.log(ss&&qq,'1大于10？？,6大于5 有一个是错的都是错的');//假的 false
+     //||如果两个数有一个是真的一个是假的一个是真的就是真
+    var tt = 88 > 55;
+    var nn = 33 > 66;
+    console.log(tt || nn,'||如果两个数有一个是真的一个是假的一个是真的就是真');
+    var sd = 23 > 11;
+    var as = 6 > 100;
+    var gh = sd || as;
+    console.log(gh);
+    console.log(!gh);
+
+</script>
+</body>
+</html>

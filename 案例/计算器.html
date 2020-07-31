@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+</head>
+<body>
+<input type="number" id="num1" >
+<select name="" id="fuhao">
+    <option value="+">+</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+    <option value="-">-</option>
+    <option value="%">%</option>
+</select>
+<input type="number" id="num2">
+=
+<input type="number" id="num3">
+<button id="btn">计算</button>
+<script>
+    btn.onclick = function () {
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+    var num3 = document.getElementById('num3');
+    var fuhao = document.getElementById('fuhao').value;
+    num1 = Number(num1);
+    num2 = Number(num2);
+           var res = 0;
+    //计算值
+    switch (fuhao) {
+        case "+":
+        res = num1+num2;
+        break;
+         case "-":
+        res = num1-num2;
+        break;
+         case "*":
+        res = num1*num2;
+        break;
+         case "/":
+        res = num1/num2;
+        break;
+         case "%":
+        res = num1%num2;
+        break;
+        default:
+            res="暂不支持"
+    }
+    num3.value = res;
+
+    }
+
+
+</script>
+</body>
+</html>

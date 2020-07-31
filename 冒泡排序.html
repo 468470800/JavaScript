@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+</head>
+<body>
+<script>
+    var aee = [1,2,3,4,5,-1,-2,-3,-4,100,-200];
+    //  newAee = [-200,-100,-4,-3,-2,-1,1,2,3,4,5];
+    //冒泡排序有小到大比较小的在前面大的在后面、
+    for(var a = 0; a < aee.length; a++){//1
+        for(var j = a+1; j < aee.length; j++){//2
+            if(aee[a]>aee[j]){//判断比较 >
+                var tmp = aee[a];//如果它小于他就在前面
+                aee[a] = aee[j];
+                aee[j] = tmp;
+            }
+        }
+    }
+    console.log(aee)
+    var arr = 1;
+    var a = Array.isArray(arr);
+    console.log(a);//false
+
+
+</script>
+</body>
+</html>

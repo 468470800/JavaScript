@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom节点</title>
+</head>
+<body>
+<!--    什么是节点-->
+<!--    html 是一个节点 body 同样是一个节点 head div p 标签 一句话一行有用的代码就被称为节点-->
+
+    <div id="box">愚公移山人定胜天</div>
+    <div id="bor">斗争主义</div>
+    <div class="bou">三个月</div>
+    <div id="bov">世上无难事，只要肯登攀</div>
+<script>
+    //nodeName 节点名字     nodeType 节点类型       nodeValue  节点值
+     var box = document.getElementById('box');//获取文档div
+     var child = box.childNodes;//获取子节点获取元素内部所有的子节点内容
+     console.log(child);//[text]假的数组只有length;长度
+     console.log(child[0].nodeName);//文本节点一开始是一个数组加上下标就可以获取到他的第一个就是名字text
+     console.log(child[0].nodeType);//3
+    console.log(child[0].nodeValue);//内容
+    //DoM节点 元素节点 element 由标签组成
+    //attr 属性节点  由属性和属性值组成
+    //text 文本节点 由文字组成
+
+    //查找元素
+    var bor = document.getElementById('bor');//获取文本标签
+    console.log(bor,typeof(bor));//Object
+    var str = bor.innerHTML;
+    console.log(str,'获取到的 是bor里面的内容');
+    //获取他的Id名字
+    var w = bor.id;
+    console.log(w);
+    var bou = document.getElementsByClassName('bou');//先声明后获取
+    var e = bou.className;
+    console.log(e);
+
+    //元素属性
+    //获取节点
+    var oBov = document.getElementById('bov')
+    var bov = oBov.id;
+    console.log(bov);
+    //设置属性值
+    oBov.id = "div1"
+    console.log(oBov)
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数数组复习</title>
+</head>
+<body>
+<script>
+    //定义一个函数
+    function test(a,b)  {
+        console.log(a+b)
+        console.log(arguments);//对象伪类数组 length 他的长度由实参决定跟形参没有关系
+        console.log(arguments[0]);//对象伪类数组 length 他的长度由实参决定跟形参没有关系
+        console.log(arguments[0]+arguments[1]);//下标的值相加
+    }
+    // test(1,2)//3
+    test(1,6,3,8,0)//有几个参数算几个   7
+
+    // var 函数名 = new Function();
+    // 小总结
+    //     new String();
+    //     new  Array();
+        // new Date()
+        // Math
+        // new Function();
+
+    var arr =[];
+    var ass = [null,false,true,'Array','95','object'];
+    console.log(ass[1],ass);
+    console.log(ass[ass.length-1]);//获取到数组 最后一个元素下标 数组长度-1;
+    ass[ass.length-1]=1;
+    ass[4] = 1;//找到数组下标 直接 赋值
+    console.log(ass)
+    //数组元素的添加 删除
+    var add = ['白日依山尽，黄河入海流'];
+    // 添加
+    add[add.length] = '2';//尾部添加
+    console.log(add);
+    //从尾部   添加
+    add.push(3,4);
+    console.log(add);
+    //头部添加
+    add.unshift(6,7);
+    console.log(add);
+    //删除 delete();
+    delete(add[0]);
+    console.log(add);
+    //拼接
+    add.pop();
+    console.log(add);
+    //转为字符串 拼接
+    var aee = [2,3,4,56,78,-100,1000];
+    var eea = aee.join('-');
+    console.log(eea);
+    //排序
+    aee.sort(res);
+    function res(a,b){
+        return a-b;
+    }
+    console.log(aee);
+    //reverse()
+    var aff = [-100000,0,-0,190.0,100000,999999];
+    console.log(aff);
+    var ffa = aff.reverse();
+    console.log(ffa);
+    //截取 slice();   从下标开始截取字符串0——?
+    var jq = aff.slice(0,4);
+    console.log(jq);
+    // indexOf();       查找数组元素有就返回 没有发返回-1;
+    var app = ['AD','c','666','888'];
+    var ree = app.indexOf('888');//返回数组下标
+    console.log(ree)
+</script>
+</body>
+</html>

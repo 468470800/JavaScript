@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertBefore</title>
+</head>
+<body>
+<input type="text" id="inp" value="">
+<button id="tj">添加</button>
+<button id="del">撤回</button>
+<ul id="list">
+    <li>2019年没有上班</li>
+    <li>2020年必须上班</li>
+</ul>
+<script>
+    //获取id元素节点
+    var inp = document.getElementById('inp');
+    var del = document.getElementById('del');
+    var ul = document.getElementById('list')
+
+    tj.onclick = function () {
+        // alert(1)
+        if (inp.value == "") {//判断inp.value的值内容是否为空
+            alert('内容不可为空');//弹出
+            return;//在函数中起到结束不往下执行了
+        }
+        var inpu = inp.value;
+        //创建元素子节点
+        var li = document.createElement('li');
+        //再把input框接受到的内容复制给li内容
+        li.innerHTML = inpu;//将输入内容创建li当中
+        console.log(ul.firstElementChild);//获取到ul的第一个元素节点
+        var firEle = ul.firstElementChild;
+        ul.insertBefore(li, firEle);//获取到那个节点里面添加参数一个新节点 二个那个前面添加
+    }
+            console.log();
+    // del.onclick = function () {
+    //     var oul = ul.childNodes;
+    //     for(var a = oul.length -1; a>=0; a--){
+    //         ul.removeChild(oul[a])
+    //     }
+    // }
+    // //删除
+    del.onclick = function(){
+        // alert(1);
+        //获取ul的第一个元素节点
+        var one = ul.firstElementChild;//获取ul的第一个的子元素
+        console.log(one);
+        ul.removeChild(one);//ul父元素删除里面的子元素 removeChild(要删除的元素)
+
+    }
+
+
+
+</script>
+</body>
+</html>

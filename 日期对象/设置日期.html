@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期</title>
+</head>
+<body>
+<script>
+    var myDate = new Date();
+    //获取年月日
+    var year = myDate.getFullYear();
+    console.log(year,'获取当前年');
+    var month = myDate.getMonth();
+    var month = month + 1;
+    console.log(month,'设置月份必须+1因为只能取到0————11月');
+    var ri = myDate.getDate();
+    console.log(ri,'日');
+    var xingqi = myDate.getDay();
+    console.log(xingqi,'获取星期');
+    //小时    getHours   setHours()
+    var xs = myDate.getHours();
+    console.log(xs,'获取小时几点0——23');
+    var fz = myDate.getMinutes();
+    console.log(fz,'分钟0——59');
+    var m = myDate.getSeconds();
+    console.log(m,'获取当前秒');
+    var hm = myDate.getMilliseconds();
+    console.log(hm,'获取当前毫秒数，0-999');
+
+    var mdDate = new Date();
+    //设置年
+    mdDate.setFullYear(1997);
+    console.log(mdDate);
+    //设置月份
+    mdDate.setMonth(10-1);
+    console.log(mdDate)
+    //甚至星期
+    mdDate = mdDate.setDate();
+    console.log(mdDate)
+</script>
+</body>
+</html>

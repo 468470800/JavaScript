@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math随机颜色</title>
+</head>
+<body>
+<script>
+    // 向下取整
+    var arr = [];//空数组
+    for(var i = 0; i < 3; i++){//循环三次
+    var a = Math.floor(Math.random()*256)//随机数向下取整0_255
+    console.log(a);
+    arr.push(a);//添加到数组里面
+    }
+    str = 'rgb('+arr[0]+','+arr[1]+','+arr[2]+')';//添加字符串数组下标
+    document.body.style.background = str;//页面。
+</script>
+</body>
+</html>

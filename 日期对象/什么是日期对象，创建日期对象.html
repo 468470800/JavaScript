@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>什么是日期对象，创建日期对象</title>
+</head>
+<body>
+<script>
+    //获取当前时间
+    // myDate = new Date();
+    var myDate = new Date();
+    console.log(myDate);//Sun Jul 05 2020 15:44:30 GMT+0800
+    //获取未来时间
+    // var futureDate = new Date('2022-01-01 00:00:00');
+    var futureDate = new Date('2022-01-01 00:00:00');
+    console.log(futureDate,'获取未来时间');
+    //将时间转成字符串
+    // toString();  toLocaleString();
+    var mdDate = new Date('1997-04-28');
+    console.log(mdDate,'设置未来时间');
+    console.log(typeof mdDate);
+    var md_Date = mdDate.toString();//
+    console.log(md_Date,'转字符串');
+    console.log(typeof md_Date);
+    var md_Dat = mdDate.toLocaleString();
+    console.log(md_Dat,'转字符串');
+    var mf_Date = new Date();
+    console.log(mf_Date.valueOf());
+    //转字符串
+    var mt_Date = new Date();
+    var mt_Date = mt_Date.toLocaleString()
+    console.log(mt_Date,typeof(mt_Date));
+    var mn_Date = new Date();
+    var mn_Date = mn_Date.toString()
+    console.log(mn_Date,typeof(mn_Date))
+
+</script>
+</body>
+</html>

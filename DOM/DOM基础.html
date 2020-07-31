@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM基础</title>
+</head>
+<body>
+<input type="text" id="txt">
+<input type="text" id="btn" value="点击我查">
+
+<ul>
+    <li calss="oli">111</li>
+    <li class="oli">222</li>
+    <li class="oli">333</li>
+</ul>
+
+<input type="text" name="game" value="银川宁夏">
+<script>
+    var oTxt = document.getElementById('txt');
+    var oBtn = document.getElementById('btn');//获取他们两个元素用id
+    oBtn.onclick = function () {
+        alert(oTxt.value);
+    }
+    var oLi = document.getElementsByClassName('oli');
+    //class getElementsByClassName('oli')方式获取
+    for(var i = 0; i <oLi.length; i++){
+        alert(oLi[i].innerHTTML)
+    }
+    //getElementsByName
+    var oGame = document.getElementsByName('game')
+    for(var j = 0; j<oGame.length; j++){
+        alert(oGame[i]);
+    }
+    //setAttribute  设置改变dom元素
+    oGame[0].setAttribute("style","color:blue");
+</script>
+</body>
+</html>

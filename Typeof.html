@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // type
+    var a = 1;
+    console.log(typeof a);//Number
+    var b = 123;
+    console.log(typeof b);//Number
+    var c = "typeof,判断数据类型";
+    console.log(typeof c);//string 用""号叫字符串
+    var d = false;
+    console.log(typeof d);//boolean对象
+    var f = null ;
+    console.log(typeof f);//null 空 对象 Object
+    var g ;
+    console.log(typeof g);//undefind 未定义因为没有写赋值
+    var e = new Array();
+    console.log(typeof e);//new 新 Array()对象 是一个新的对象
+    var h = 2;
+    console.log(typeof (typeof h));//string
+    var h = 2;
+    console.log(typeof h);//boolean对象
+    // 类型转化
+    var p = "123abc";
+    console.log(typeof p);//string
+    var k = Number(p);
+    console.log(k);//NaN
+    console.log(typeof k);//Number
+    var t = Number(k);
+    console.log(typeof t);//Number
+    console.log(typeof t);
+    // parselnt         整点型
+    var r = "666.6abc";
+    console.log(typeof r);//string
+    var e = parseInt(r);//整点型
+    console.log(e)  ;
+    console.log(typeof e);//Number
+    // parseFloat       浮点型
+    var zd = "888.8.8.fdx";
+    console.log(zd);//String 888.8.8.fdx
+    console.log(typeof zd);
+    var nzd = parseFloat(zd);
+    console.log(nzd);//整点型带小数点一个小数点
+    //string tostring 字符串
+    var ts = 10;
+    console.log(ts.toString());//10
+    console.log(typeof(ts.toString()));//string
+    console.log(ts.toString(2));//1010
+    console.log(ts.toString((8)));//12
+    console.log(ts.toString(16));//a
+    // tostring
+    var num = 10;
+    console.log(String(num));//string
+    var num1;
+    console.log(String(num1));//"undefinde"
+    console.log(typeof(String(num)));//string
+    var num2 = null;
+    console.log(String(num2));//null
+    console.log(typeof(String(num2)));//string
+    var boo = true;
+    console.log(String(boo));//"true"
+    console.log(typeof(String(boo)));//string
+    //Boolean
+    var u = 10;
+    console.log(Boolean(num));//true
+    var u1 = 200 -"10PX";//NAN
+    var u2;
+    console.log(Boolean(u2));//false
+
+
+</script>
+</body>
+</html>

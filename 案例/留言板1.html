@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板1</title>
+    <style>
+        input{
+            margin: 10px 0px;
+        }
+        ul li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            margin-left: 130px;
+        }
+    </style>
+</head>
+<body>
+留言主题: <input type="text" id="title" placeholder="留言主题(8个字)" maxlength="8">
+<br>
+留言内容: <textarea name="" id="txt" cols="30" rows="10" placeholder="留言内容(50字)" maxlength="50"></textarea>
+<br>
+<button id="tj">提交内容</button>
+<h2>留言内容:</h2>
+<div>
+    <ul id="list">
+        <li>留言标题</li>
+        <li>留言内容信息 <p>2020/7/9 22:11</p></li>
+        <li><a href="#" id="sc">删除</a></li>
+    </ul>
+</div>
+<script>
+    var tite = document.getElementById('title');
+    var txte = document.getElementById('txt');//获取inpu txt两个输入框的内容值
+
+    //提交内容
+    tj.onclick = function () {
+      var tit = tite.value;//获取用户输入的内容
+      var txt = txte.value;
+      console.log(tit,txt)
+      var oul = document.createElement('ul');
+      oul.innerHTML += '<li>留言标题</li>'
+      oul.innerHTML += '<li>留言内容信息 <p>2020/7/9 22:11</p></li>'
+      oul.innerHTML += '<li><a href="#" id="sc">删除</a></li>'
+      console.log(oul)
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

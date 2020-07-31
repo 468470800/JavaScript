@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>return</title>
+</head>
+<body>
+<script>
+    // function add(a,b){// function声明函数关键字   add(两个参数)函数名
+    //     res = 1+9;//执行语句
+    //     return res;//返回语句   关键字 return 就是结束返回再继续执行了
+    // }
+    //  var c = add();//调用函数名字
+    //  console.log(c)
+    //
+    // function test(v,n,m){
+    //      return 2 + 7 + 1;
+    // }
+    // var zx = test();
+    //  console.log(zx);
+
+     // var zj = prompt("请输入三个球他们的和");
+     var num1 = prompt("1个数")
+     var num2 = prompt("2个数")
+     var num3 = prompt("3个数")
+     num1 = Number(num1);
+     num2 = Number(num2);
+     num3 = Number(num3);
+     var res = num1+ num2+ num3;
+     console.log(res)
+     alert(res)
+    //函数与解析提升
+    // posmg();
+    //  var posmg = function () {
+    //     console.log("函数提升与解析")
+    //  }
+      var posmg = function () {
+        console.log("函数提升与解析")
+     }
+     posmg()
+     var aa = prompt("输入一个");
+     if(isNaN(aa)){
+         alert(true)
+     }else{
+         alert(false)
+     }
+     var aaa = prompt("输入一个数值小时不0")
+      aaa = Number(aaa);
+     if(aaa<10){
+       aaa = "0"+aaa;
+     }
+     alert(aaa)
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+		<label>留言主题：</label>
+		<input type="text" id="title">
+	</p>
+	<p>
+		<label>留言内容：</label>
+		<textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+	</p>
+	<button id="btn">确认留言</button>
+
+	<h2>留言列表</h2>
+	<div id="list">
+		<dl>
+			<dt>留言主题：轻轻的我来了</dt>
+			<dd>留言时间：2018-10-02 15:34</dd>
+			<dd>
+				留言内容：轻轻的我来了,正如你瞧瞧的滚<a href="javascript:void(0);"
+				onclick="del(this)">删除</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>留言主题：轻轻的我来了</dt>
+			<dd>留言时间：2018-10-02 15:34</dd>
+			<dd>
+				留言内容：轻轻的我来了,正如你瞧瞧的滚<a href="javascript:void(0);"
+				onclick="del(this)">删除</a>
+			</dd>
+		</dl>
+	</div>
+	<script>
+	var title=document.getElementById('title');
+	var detail=document.getElementById('detail');
+	var btn=document.getElementById('btn');
+	var list=document.getElementById('list');
+
+	btn.onclick=function(){
+		// alert(11);
+		//获取用户输入的内容
+		var tit = title.value;
+		var det = detail.value;
+		var date = new Date();
+		date = date.toLocaleString();
+
+		// console.log(tit,det);
+		//创建dl
+		var oDl = document.createElement('dl');
+		//将用户输入的内容添加到dl中 ，
+		oDl.innerHTML = '<dt>留言主题：'+tit+'</dt>';
+		oDl.innerHTML = oDl.innerHTML + '<dd>留言时间：'+date+'</dd>';
+		oDl.innerHTML += '<dd>留言内容：'+det+'<a href="javascript:void(0);" onclick="del(this)">删除</a> </dd>';
+
+		// console.log(oDl);
+		list.appendChild(oDl);
+	}
+
+	//删除
+	function del(obj){
+		console.log(obj);
+		// this:表示当前标签所代表的对象
+		//parentNode属性：获取当前元素的父节点
+		//parentElement属性：获取当前元素的父元素
+		// console.log(obj.parentNode);
+		// console.log(obj.parentNode.parentNode);
+
+		// obj.parentNode.parentNode.remove();
+		obj.parentElement.parentElement.remove();
+
+	}
+
+
+
+	</script>
+
+</body>
+</html>

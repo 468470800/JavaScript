@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+</head>
+<body>
+<script>
+    function getLeftDate(){
+        //设置倒计时未来时间想要获取的时间  1.
+    var myDate = new Date('2020-10-01 00:00:00');
+    console.log(myDate);
+    //获取时间
+    var future_time = myDate.getTime();
+    console.log(future_time);
+    // 2.获取当前时间
+    var cur_date = new Date();
+    var cur_time = cur_date.getTime();
+    //两个时间的差距   3.
+     var diff_time = future_time - cur_time;
+    // 4. 将3的结果转化为日期 ms-1000->60->60h->24->d-365->y
+    //var diff = 12000;
+    var seconds = parseInt(diff_time/1000)%60;
+    var minutes = parseInt(diff_time/1000/60)%60;
+    var hours = parseInt(diff_time/1000/60/60)%24;
+    var days = parseInt(diff_time/1000/60/60/24)%365;
+    var years = parseInt(diff_time/1000/60/60/24/365);
+    //5.打印
+    var str = '国庆节倒计时 :'+years+'年'+days+'天'+hours+'小时'+minutes+'分'+seconds+'秒';
+    return str;
+    }//6.
+    setInterval(function () {
+    var res = getLeftDate();
+    // document.write(res);追加会重复、
+    document.body.innerHTML = res;
+    },1000)
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1
+    //转化成数据类型Number
+    var a = '';//声明一个 变量 A = '一个空的字符串' 空就是没有就是 零
+    b = Number(a);//将A的值扔到Number里面转成数据类型
+    console.log(b); //打印从新赋值的变量  b  0
+    console.log(typeof b);//Number
+    var c = true;//1
+    e = Number(c);//
+    console.log(e);//1
+    console.log(typeof e);//Number
+    var d = false;
+    f = Number(d);
+    console.log(f);//0
+    console.log(typeof f);//Number
+    var t = undefined;
+    g = Number(t);
+    console.log(g);//NAN
+    console.log(typeof g);//Number
+    // 2    不使用var 声明的变量直接给了window对象页面html
+    function test(){
+        w = 6;//? 不使用var 声明的变量直接给了window
+    }
+    test();
+    console.log(w);
+     // 3
+    var h = 1;
+    var y = 1.2;
+    var r = NaN;
+    console.log(typeof(h));//number整点型
+    console.log(typeof(y));//number浮点型
+    console.log(typeof r);//Number NAN
+    //4
+    // 加""双引号的都是字符串''
+    var q = '风云';
+    var o = "/n";
+    var i = "1";
+    console.log(typeof q);//string
+    console.log(typeof (o));//string
+    console.log(typeof (i));//string
+    //  5 Boolean
+    var j = true;
+    var k = false;
+    console.log(typeof j);//boolean
+    console.log(typeof (k));//Boolean
+    // 6
+    var tt ;
+    console.log(typeof(tt));//undefind
+    var ee = null;
+    console.log(typeof ee);//Object
+    //7 window
+    console.log(typeof window)//对象
+    console.log(typeof(typeof window))
+
+
+</script>
+</body>
+</html>

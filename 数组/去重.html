@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去重 </title>
+</head>
+<body>
+<script>
+    var add = [[1,2,3,4,5],['A','B','C']];
+    for(var a = 0; a < add.length; a++){//1.两次循环获取到他的值
+        // console.log(add[a]);//一维
+        // console.log(add[a].length);//二维
+        for(var b = 0; b < add[a].length; b++){//2.保存第一次循环得到值再次输出循环
+            console.log(add[a][b])//
+        }
+    }
+
+    var arr = [1,2,3,4,5,6,6,5,4,3,2,1];
+    var ass =[];
+    console.log(ass);
+    console.log(arr);
+    for(var h = 0; h < arr.length; h++){
+        if(ass.indexOf(arr[h]) == -1){
+            ass.push(arr[h])
+        }
+    }
+                console.log(ass);
+</script>
+</body>
+</html>

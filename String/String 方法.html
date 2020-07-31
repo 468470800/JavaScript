@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String方法</title>
+</head>
+<body>
+<script>
+    //replace  替换   单个替换
+    var str = "少年强就国强";
+    console.log(str);
+    var res = str.replace('就','则');//2个参数需要替换的内容，新的
+    console.log(res);
+    //多个替换
+    var str1 = 'good morning';
+    // var ree = str1.replace(/o/g,'o-');
+    var ree = str1.replace(/o/g,'w');//全局替换多个替换
+    console.log(ree);
+    console.log(str1)
+    //多个匹配  match
+    var stt = 'gou de not';
+    var rer = stt.match(/o/g,'o');
+    console.log(stt);
+    console.log(rer);
+    var sdd = 'as fo ndfffd ssd sdo ou ilg dfdd'
+    var rss = sdd.match('s');//单个
+    console.log(rss);
+    console.log(sdd);
+    // substring
+    var str2 = '自信人生二百年，回荡积水三千里';
+    var ret = str2.substring(0,2);
+    console.log(ret);//
+    //split()
+    var str3 = '道法自然，无为方能无不为';
+    var ret = str3.split(' ');
+    console.log(ret);
+    console.log(str3);
+//  toUpperCase();  翻译成大写
+    var srr = 'good morning';
+    var res = srr.toUpperCase();
+    console.log(srr);
+    console.log(res);
+    //indexOf() 查找当前字符串中的关键字返回下标
+    var sdg = 'indexof';
+    var sdf = sdg.indexOf('n');
+    console.log(sdg);
+    console.log(sdf);
+    //lastIndeOf
+    var sgg = 'lastIndeOf';
+    var ass = sgg.lastIndexOf('l');
+    console.log(ass);
+    console.log(sgg);
+    //toLowerCase   转小写
+    var ere = 'toLowerCase';
+    var tre = ere.toLowerCase();
+    console.log(ere);
+    console.log(tre);
+
+
+
+</script>
+</body>
+</html>

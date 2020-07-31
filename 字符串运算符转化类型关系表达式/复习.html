@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复习</title>
+</head>
+<body>
+<script>
+    //1.
+    var a = 3 > 2;
+    var b = 4 <1;
+    console.log(a&&b);//false有一个假的就是假
+    console.log(a||b);//true有一个真的就是真
+    //2.
+    console.log(!(a<b));//true
+    console.log(!a<b);//false
+    var aa = 100;
+    var bb = 20;
+    console.log(!aa>bb);//非100大于20
+    console.log(!aa<bb);//！ 100<20
+    //3.    Number
+    var a = 'abc123';
+    var b = parseInt(a);
+    console.log(b);//NaN
+    var o = "123abc";
+    var f = parseInt(o);//首字母必须是数字才可以取到
+    console.log(f);//123
+    var ss = "1234.5qwweww";
+    var sd = parseFloat(ss);
+    console.log(sd)
+    var cx = "123";
+    console.log(cx,typeof(cx))//string 字符串
+    var cs = parseInt(cx);//
+    console.log(cs,typeof(cs));//数字类型 Number
+    var tt = parseFloat(cx);
+    console.log(typeof(tt),tt)//数字类型 Number
+     
+
+</script>
+</body>
+</html>

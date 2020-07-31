@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1
+ var s = "什么是全局变量什么是局部变量"   ;
+ var x = "全局变量是在html页面都可以访问的到局部变量是在某一块或者说是在function";
+ console.log(s);
+ console.log(x);
+ document.write(s);
+ document.write('<br/>');
+ document.write('全局变量是在html页面都可以访问的到局部变量是在某一块或者说是在function{}');
+// 2
+ var a = 1;
+ console.log(a);//全局变量  什么叫变量可变的量叫变量
+ function test(){//函数 function 函数名XXX随意起名 函数就是一个封装好装代码的盒子随时可以调用随时可以取到
+     //打个比喻 相当于 标签里面的<div> </div>
+     var b = 2;//声明一个啊函数        局部变量
+     console.log(b)
+ }
+ test()//函数调用函数名字才可以 这位就是函数名的作用
+ // console.log(b);未定义????为神魔未定义因为在es5中唯一划分作用域的是函数在函数外面是无法访问到的只有在函数里面
+ //并且调用函数名才可以访问到   这样是错误的
+ // 3
+    if(8>6){
+        var c = "9,我是一个局部变量";
+    }
+    console.log(c);//为神魔不是以全局变量因为它不是function{}在es5中唯一划分作用域的是函数
+    //只是一个if(){}判断 是一个关键字 全局变量 在变量名以下可以访问到
+    // 4  function demo(){}
+    // 声明函数
+    function demo(){
+        console.log('函数,函数三要素 关键字 函数名 调用函数名')//在不调用函数名字情况下可以访问到吗?       不能 函数三要素 关键字 函数名 调用函数名
+    }
+    //调用函数名字才可以访问
+    demo();
+    //5
+    // 函数在外面可以访问到吗
+    function qq(){
+        var ff = "请问在函数外打印可以访问到吗?"//  不可以
+        // console.log(ff,'在函数体内部才可以打印出来')
+    }
+    qq();
+   // console.log(ff);//未定义  因为在外面没有声明ff这个变量 所以 在es5中唯一划分作用域的是函数不可以访问到
+    //变量的作用域.html?_ijt=5ab9p1utgm412spo9l3n59vd1h:48 Uncaught ReferenceError: ff is not defined
+
+    var hs = 1;
+    function dda(){
+        var hs = "函数";
+        console.log(hs)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+</head>
+<body>
+<script>
+    //max 最大数
+    console.log(Math.max(2,3,5,1,8,9,0));
+    //min  最小数
+    console.log(Math.min(1,2,34,9,100,0,-1));
+    //ceil();
+    var num = 1.9;
+    var jun = -100;
+    var ht = -9.9;
+    var tt = 0.1;
+    var ss = -1.4;
+    var aa = 1.4;
+    console.log(Math.ceil(tt));//1整数向上取整
+    console.log(Math.ceil(ss))//-1负数向下取整
+    console.log(Math.ceil(aa))//上 2
+    console.log(Math.ceil(ht));//9下
+    console.log(Math.ceil(jun));//-100
+    console.log(Math.ceil(num));//2上
+    //floor  正数向下取整 负数取整向上
+    var vr = 1.8;
+    var vd = -1.9;
+    console.log(Math.floor(vr),Math.floor(vd))
+    //round  四舍五入
+    var sum = 2.4;
+    var sur = 1.5;
+    console.log(Math.round(sum),Math.round(sur));
+    //random
+    console.log(Math.random());
+    console.log(Math.random());
+    //随机数取值0-1范围
+    //ads       绝对值
+    var hll = -2.3;
+    var sll = -1;
+    console.log(Math.abs(hll));//2.3
+    console.log(Math.abs(sll));//1
+    //exp 幂
+    var ass = 100;
+    console.log(Math.exp(ass));//2.6881171418161356e+43
+    //pow
+    console.log(Math.pow(2,3));
+    //aqrt
+    console.log(Math.sqrt(9));
+</script>
+</body>
+</html>
